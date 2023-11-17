@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ガチャの森</title>
+    <link rel="stylesheet" href="css/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        img {
+            height: 500px;
+        }
+
+        header {
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        ガチャの森
+    </header>
+
+    <main>
+        <div class="container getPhoto">
+            <div class="photoRundom">
+                <script>
+                    photoRundom = new Array();
+                    photoRundom[0] = "img/img_1/img01.jpg"
+                    photoRundom[1] = "img/img_1/img13.jpg"
+                    photoRundom[2] = "img/img_1/img14.jpg"
+                    photoRundom[3] = "img/img_1/img15.jpg"
+                    photoRundom[4] = "img/img_1/img16.jpg"
+                    photoRundom[5] = "img/img_1/img17.jpg"
+                    photoRundom[6] = "img/img_1/img101.jpg"
+                    photoRundom[7] = "img/img_1/img102.jpg"
+                    photoRundom[8] = "img/img_1/img103.jpg"
+                    photoRundom[9] = "img/img_1/img104.jpg"
+                    photoRundom[10] = "img/img_1/img105.jpg"
+                    n = Math.floor(Math.random() * photoRundom.length);
+                    document.write("<img src='" + photoRundom[n] + "' alt='ランダムに選ばれた動物の写真'>")
+                </script>
+            </div>
+            <p class="message">画像の上で右クリック→名前を付けて画像を保存</p>
+            <button type="button" onclick="window.close()">このウインドウを閉じて戻る</button>
+        </div>
+    </main>
+
+    <footer>
+        ☻gachanomori
+    </footer>
+</body>
+
+</html>
