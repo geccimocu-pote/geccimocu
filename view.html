@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ガチャの森</title>
+    <link rel="stylesheet" href="css/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        img {
+            height: 500px;
+        }
+
+        header {
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        ガチャの森
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="photoRundom">
+                <script>
+                    photoRundom = new Array();
+                    photoRundom[0] = "img/img_2/img02.jpg"
+                    photoRundom[1] = "img/img_2/img03.jpg"
+                    photoRundom[2] = "img/img_2/img10.jpg"
+                    photoRundom[3] = "img/img_2/img11.jpg"
+                    photoRundom[4] = "img/img_2/img12.jpg"
+                    n = Math.floor(Math.random() * photoRundom.length);
+                    document.write("<img src='" + photoRundom[n] + "' alt='ランダムに選ばれた風景写真'>")
+                </script>
+            </div>
+            <p class="message">画像の上で右クリック→名前を付けて画像を保存</p>
+            <button type="button" onclick="window.close()">このウインドウを閉じて戻る</button>
+        </div>
+    </main>
+
+    <footer>
+        ☻gachanomori
+    </footer>
+</body>
+
+</html>
