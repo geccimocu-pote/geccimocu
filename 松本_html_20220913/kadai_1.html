@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ガチャの森</title>
+    <link rel="stylesheet" href="css/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        ガチャの森
+    </header>
+    <hr>
+    <div class="ticket">
+        <p>ガチャチケット <span id="ticket">0</span> 枚</p>
+    </div>
+    <div class="get">
+        <p>★ガチャチケット無料配布キャンペーン★</p>
+        <button id="get" class="btn btn-success btn-lg">ガチャチケットGet!</button>
+    </div>
+
+    <main>
+        <div class="container">
+            <div class="gacha">
+                <div class="samune">
+                    <p>動物の写真</p>
+                    <div class="photo sentou">
+                        <img src="img/img_1/img16.jpg" alt="ネコの写真">
+                    </div>
+                    <div class="photo">
+                        <img src="img/img_1/img13.jpg" alt="トラの写真">
+                    </div>
+                    <div class="photo">
+                        <img src="img/img_1/img15.jpg" alt="犬の写真">
+                    </div>
+                    <button type="button" id="btn1" class="btn btn-success btn-lg" disabled
+                        onclick="window.open('kadai_2.html','_blank')">1回ガチャる</button>
+                </div>
+
+                <div class="samune">
+                    <p>風景写真</p>
+                    <div class="photo sentou">
+                        <img src="img/img_2/img02.jpg" alt="富士山の写真">
+                    </div>
+                    <div class="photo">
+                        <img src="img/img_2/img03.jpg" alt="道路の写真">
+                    </div>
+                    <div class="photo">
+                        <img src="img/img_2/img10.jpg" alt="花火の写真">
+                    </div>
+                    <div class="photo">
+                        <img src="img/img_2/img11.jpg" alt="海までの道の写真">
+                    </div>
+                    <button type="button" id="btn2" class="btn btn-success btn-lg" disabled
+                        onclick="window.open('kadai_3.html','_blank')">1回ガチャる</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        ☻gachanomori
+    </footer>
+
+    <script>
+        document.getElementById('get').addEventListener('click', function () {
+            document.getElementById('ticket').innerHTML = "∞";
+            document.getElementById('ticket').style.color = "blue";
+            document.getElementById('get').innerHTML = "ガチャチケット取得済";
+            document.getElementById('get').disabled = true;
+            document.getElementById('btn1').disabled = false;
+            document.getElementById('btn2').disabled = false;
+        });
+    </script>
+</body>
+
+</html>
